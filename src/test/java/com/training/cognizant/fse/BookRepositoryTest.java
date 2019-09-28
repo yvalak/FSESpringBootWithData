@@ -26,11 +26,9 @@ public class BookRepositoryTest extends FseSpringBootWithDataApplicationTests {
 	}
 	
 	@Test
-    @Transactional
-    @Rollback(true)
 	public void testSaveBook() {
 		int existingNoOfRecords = bookRepository.findAll().size();
-		Book book = new Book();
+		Book book = new Book(0, "This is it", 25, 5 , Date.valueOf("2010-05-09"));
 
 		bookRepository.save(book);
 		int newNoOfRecords = bookRepository.findAll().size();
