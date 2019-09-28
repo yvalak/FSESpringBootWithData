@@ -54,6 +54,15 @@ public class Book {
 		this.publishDate = Date.valueOf(modelBook.getPublishDate());
 
 	}
+	
+	public Book(long bookId, String title, double price, int volume, Date publishDate) {
+		this.bookId = bookId;
+		this.title = title;
+		this.price = price;
+		this.volume = volume;
+		this.publishDate = publishDate;
+
+	}
 
 	public long getBookId() {
 		return bookId;
